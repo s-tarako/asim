@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Robot 2D Simulator (Web)</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="field-canvas" width="1000" height="500" aria-label="Robot practice field"></canvas>
+      <section id="hud" aria-live="polite">
+        <h1>Robot 2D Simulator</h1>
+        <dl>
+          <div><dt>Speed L/R</dt><dd id="wheel-speed">0.00 / 0.00 m/s</dd></div>
+          <div><dt>Strafe</dt><dd id="strafe-speed">0.00 m/s</dd></div>
+          <div><dt>Pose</dt><dd id="pose">(0.00, 0.00) m @ 0.0°</dd></div>
+          <div><dt>Input</dt><dd id="input-status">Keyboard</dd></div>
+          <div><dt>FPS</dt><dd id="fps">0</dd></div>
+        </dl>
+      </section>
+    </main>
+    <section id="help">
+      <h2>操作方法</h2>
+      <ul>
+        <li>ゲームパッド: 左右スティック上下で左右ホイール、十字キー左右で平行移動、プラス(Start)で軌跡リセット。</li>
+        <li>キーボード: 左輪 <kbd>W</kbd>/<kbd>S</kbd>、右輪 <kbd>I</kbd>/<kbd>K</kbd>、平行移動 <kbd>A</kbd>/<kbd>D</kbd> または <kbd>←</kbd>/<kbd>→</kbd>、<kbd>R</kbd> で軌跡リセット、<kbd>Space</kbd> 停止。</li>
+        <li><kbd>Esc</kbd> または <kbd>Q</kbd> でポーズ。</li>
+      </ul>
+      <p>フィールド画像は <code>../assets/sample_field.png</code> を使用します。別画像はクエリ <code>?field=path/to.png</code> でも指定できます。</p>
+    </section>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
