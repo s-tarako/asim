@@ -21,4 +21,4 @@ export const GAMEPAD_CONFIG = {
   strafePositiveButtons: [15],
 };
 
-export const DEFAULT_FIELD_IMAGE = "../assets/sample_field.png";
+export const DEFAULT_FIELD_IMAGE = "sample_field.png";
